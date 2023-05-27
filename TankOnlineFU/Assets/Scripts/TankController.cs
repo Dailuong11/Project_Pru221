@@ -1,4 +1,4 @@
-using DefaultNamespace;
+﻿using DefaultNamespace;
 using Entity;
 using Unity.VisualScripting;
 using UnityEditor;
@@ -26,7 +26,7 @@ public class TankController : MonoBehaviour
             Direction = Direction.Down,
             Hp = 10,
             Point = 0,
-            Position = new Vector3(Random.Range(0, 20), Random.Range(0, 20), 0),
+            Position = new Vector3(Random.Range(0, 5), Random.Range(0, 5), 0),
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;
