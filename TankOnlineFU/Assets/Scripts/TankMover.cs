@@ -43,6 +43,9 @@ public class TankMover : MonoBehaviour
         }
 
         gameObject.transform.position = currentPos;
+        Quaternion lockedRotation = transform.rotation;  // L?y quay hi?n t?i c?a ??i t??ng
+        lockedRotation.eulerAngles = new Vector3(lockedRotation.eulerAngles.x, lockedRotation.eulerAngles.y, 0);  // ??t góc quay Z mong mu?n
+        gameObject.transform.rotation = lockedRotation;
         return currentPos;
     }
 }
