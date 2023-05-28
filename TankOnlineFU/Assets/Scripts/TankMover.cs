@@ -13,6 +13,8 @@ public class TankMover : MonoBehaviour
     void Start()
     {
         speed = 1;
+    
+
     }
 
     // Update is called once per frame
@@ -40,8 +42,11 @@ public class TankMover : MonoBehaviour
                 break;
             default:
                 throw new ArgumentOutOfRangeException(nameof(direction), direction, null);
-        }
 
+        }
+        Quaternion lockedRotation = transform.rotation; 
+        lockedRotation.eulerAngles = new Vector3(lockedRotation.eulerAngles.x, lockedRotation.eulerAngles.y, 0);
+        gameObject.transform.rotation = lockedRotation;
         gameObject.transform.position = currentPos;
         return currentPos;
     }
