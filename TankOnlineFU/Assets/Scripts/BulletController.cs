@@ -23,7 +23,7 @@ public class BulletController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag == "Brick")
+        if (collision.gameObject.tag == "Brick" || collision.gameObject.tag == "Wall_Steel")
         {
             Destroy(gameObject);
         }
