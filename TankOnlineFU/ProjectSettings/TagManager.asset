@@ -10,6 +10,7 @@ TagManager:
   - Brick
   - Wall_Steel
   - Tree
+  - BaseMap
   layers:
   - Default
   - TransparentFX
