@@ -10,11 +10,19 @@ public class TankMover : MonoBehaviour
 
     public float speed;
 
+    private float screenLeft;
+    private float screenRight;
+    private float screenTop;
+    private float screenBottom;
+
     void Start()
     {
         speed = 1;
-    
-
+        saveScreenSize();
+        Debug.Log("Screen Left: " + screenLeft);
+        Debug.Log("Screen Right: " + screenRight);
+        Debug.Log("Screen Top: " + screenTop);
+        Debug.Log("Screen Bottom: " + screenBottom);
     }
 
     // Update is called once per frame
@@ -47,7 +55,38 @@ public class TankMover : MonoBehaviour
         Quaternion lockedRotation = transform.rotation; 
         lockedRotation.eulerAngles = new Vector3(lockedRotation.eulerAngles.x, lockedRotation.eulerAngles.y, 0);
         gameObject.transform.rotation = lockedRotation;
-        gameObject.transform.position = currentPos;
+        bool isOver = false;
+        if(currentPos.x >= screenLeft 
+            && currentPos.x <= screenRight
+            && currentPos.y >= screenBottom
+            && currentPos.y <= screenTop)
+        {
+            isOver = false;
+        } else
+        {
+            isOver = true;
+        }
+        if(!isOver)
+        {
+            gameObject.transform.position = currentPos;
+        }
+
         return currentPos;
+    }
+
+    private void saveScreenSize()
+    {
+        float screenWidth = Screen.width;
+        float screenHeight = Screen.height;
+        // save screen edges in world coordinates
+        float screenZ = -Camera.main.transform.position.z;
+        Vector3 lowerLeftCornerScreen = new Vector3(0, 0, screenZ);
+        Vector3 upperRightCornerScreen = new Vector3(screenWidth, screenHeight, screenZ);
+        Vector3 lowerLeftCornerWorld = Camera.main.ScreenToWorldPoint(lowerLeftCornerScreen);
+        Vector3 upperRightCornerWorld = Camera.main.ScreenToWorldPoint(upperRightCornerScreen);
+        screenLeft = lowerLeftCornerWorld.x;
+        screenRight = upperRightCornerWorld.x;
+        screenTop = upperRightCornerWorld.y;
+        screenBottom = lowerLeftCornerWorld.y;
     }
 }
