@@ -12,6 +12,7 @@ TagManager:
   - Tree
   - BaseMap
   - Water
+  - Background_Menu
   layers:
   - Default
   - TransparentFX

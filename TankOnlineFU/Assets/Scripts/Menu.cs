@@ -6,13 +6,25 @@ using UnityEngine.SceneManagement;
 public class Menu : MonoBehaviour
 {
     // Start is called before the first frame update
-    public void play () 
+    public void Play()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
     }
 
-    public void Map()
+    public void LoadMap()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
+    }
+    public void ConstructionMap()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+    }
+    public void Return()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }

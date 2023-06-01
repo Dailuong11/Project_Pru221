@@ -3,55 +3,62 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
-using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class SaveMap : MonoBehaviour
 {
-    [SerializeField]
-    Button buttonSave;
-    GameObject[] listSteel;
-    GameObject[] listTree;
-    GameObject[] listBrick;
-    GameObject[] listWater;
-    public void saveGame()
+    [Serializable]
+    public class MapData
     {
-        string filePath = Application.dataPath + "/savemap.txt";
-        if (File.Exists(filePath))
-        {
-            File.WriteAllText(filePath, String.Empty);
+        public List<Vector3> listSteel;
+        public List<Vector3> listTree;
+        public List<Vector3> listBrick;
+        public List<Vector3> listWater;
+    }
 
-            listSteel = GameObject.FindGameObjectsWithTag("Wall_Steel");
-            listTree = GameObject.FindGameObjectsWithTag("Tree");
-            listBrick = GameObject.FindGameObjectsWithTag("Brick");
-            listWater = GameObject.FindGameObjectsWithTag("Water");
-            string txt = "";
-            txt += $"Wall_Steel: (";
-            StreamWriter writer = new StreamWriter(filePath, true);
-            foreach (GameObject steel in listSteel)
-            {
-                txt += "(" + steel.transform.position.x + " " + steel.transform.position.y + " " + steel.transform.localScale.x + ")";
-            }
-            txt += $")\nTree: (";
-            foreach (GameObject tree in listTree)
-            {
-                txt += "(" + tree.transform.position.x + " " + tree.transform.position.y + " " + tree.transform.localScale.x + ")";
-            }
-            txt += $")\nBrick: (";
-            foreach (GameObject brick in listBrick)
-            {
-                txt += "(" + brick.transform.position.x + " " + brick.transform.position.y + " " + brick.transform.localScale.x + ")";
-            }
-            txt += $")\nWater: (";
-            foreach (GameObject water in listWater)
-            {
-                txt += "(" + water.transform.position.x + " " + water.transform.position.y + " " + water.transform.localScale.x + ")";
-            }
-            writer.Write(txt);
-            writer.Close();
-        }
-        else
+    [SerializeField]
+    private GameObject[] lSteel;
+    [SerializeField]
+    private GameObject[] lTree;
+    [SerializeField]
+    private GameObject[] lBrick;
+    [SerializeField]
+    private GameObject[] lWater;
+
+    public void SaveNewMap()
+    {
+        MapData mapData = new MapData();
+        lSteel = GameObject.FindGameObjectsWithTag("Wall_Steel");
+        lTree = GameObject.FindGameObjectsWithTag("Tree");
+        lBrick = GameObject.FindGameObjectsWithTag("Brick");
+        lWater = GameObject.FindGameObjectsWithTag("Water");
+
+        mapData.listSteel = new List<Vector3>();
+        foreach (GameObject obj in lSteel)
         {
-            Debug.Log("File not found");
+            mapData.listSteel.Add(obj.transform.position);
         }
+
+        mapData.listTree = new List<Vector3>();
+        foreach (GameObject obj in lTree)
+        {
+            mapData.listTree.Add(obj.transform.position);
+        }
+
+        mapData.listBrick = new List<Vector3>();
+        foreach (GameObject obj in lBrick)
+        {
+            mapData.listBrick.Add(obj.transform.position);
+        }
+
+        mapData.listWater = new List<Vector3>();
+        foreach (GameObject obj in lWater)
+        {
+            mapData.listWater.Add(obj.transform.position);
+        }
+
+        string json = JsonUtility.ToJson(mapData);
+        File.WriteAllText("map.json", json);
+        SceneManager.LoadScene("Menu");
     }
 }
