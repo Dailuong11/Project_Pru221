@@ -44,13 +44,18 @@ public class ConstructionController : MonoBehaviour
         {
             tank.GetComponent<BoxCollider2D>().enabled = false;
             tilemap.SetTile(posMaterial, null);
-            tilemap.SetTile(posMaterial, tiles[index]);
-
-            index++;
-            if (index >= tiles.Length)
+            Debug.Log(index);
+            if(index < tiles.Length)
             {
+                tilemap.SetTile(posMaterial, tiles[index]);
+                index++;
+            } else if(index == tiles.Length)
+            {
+                tilemap.SetTile(posMaterial, null);
                 index = 0;
-            }
+            } 
+
+            
         }
     }
 
