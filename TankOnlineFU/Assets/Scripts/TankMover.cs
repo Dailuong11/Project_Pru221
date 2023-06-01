@@ -19,10 +19,6 @@ public class TankMover : MonoBehaviour
     {
         speed = 1;
         saveScreenSize();
-        Debug.Log("Screen Left: " + screenLeft);
-        Debug.Log("Screen Right: " + screenRight);
-        Debug.Log("Screen Top: " + screenTop);
-        Debug.Log("Screen Bottom: " + screenBottom);
     }
 
     // Update is called once per frame
