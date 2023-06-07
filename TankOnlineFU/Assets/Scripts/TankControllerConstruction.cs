@@ -51,10 +51,10 @@ public class TankControllerConstruction : MonoBehaviour
             Move(Direction.Up);
         }
 
-        if (Input.GetKey(KeyCode.Space))
-        {
-            Fire();
-        }
+        //if (Input.GetKey(KeyCode.Space))
+        //{
+        //    Fire();
+        //}
     }
 
     private void Move(Direction direction)
@@ -71,14 +71,14 @@ public class TankControllerConstruction : MonoBehaviour
         };
     }
 
-    private void Fire()
-    {
-        var b = new Bullet
-        {
-            Direction = _tank.Direction,
-            Tank = _tank,
-            InitialPosition = _tank.Position
-        };
-        GetComponent<TankFirer>().Fire(b);
-    }
+    //private void Fire()
+    //{
+    //    var b = new Bullet
+    //    {
+    //        Direction = _tank.Direction,
+    //        Tank = _tank,
+    //        InitialPosition = _tank.Position
+    //    };
+    //    GetComponent<TankFirer>().Fire(b);
+    //}
 }
