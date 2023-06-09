@@ -10,23 +10,25 @@ public class TankControllerConstruction : MonoBehaviour
     private Tank _tank;
 
     public Sprite tankUp;
-    private TankMover _tankMover;
+    private TankMoverConstruction _tankMover;
     private SpriteRenderer _renderer;
-
+    private Vector2 cellSize;
+    private Vector2Int gridSize;
     private void Start()
     {
+        cellSize = new Vector2(0.32f, 0.32f);
+        gridSize = new Vector2Int(12, 26);
         _tank = new Tank
         {
             Name = "Default",
             Direction = Direction.Down,
             Hp = 10,
             Point = 0,
-            //Position = new Vector3(Random.Range(0, 5), Random.Range(0, 5), 0),
-            Position = new Vector3(0, -1, 0),
+            Position = new Vector3(0.16f, 0.16f, 0),
             Guid = GUID.Generate()
-        };
+        };        
         gameObject.transform.position = _tank.Position;
-        _tankMover = gameObject.GetComponent<TankMover>();
+        _tankMover = gameObject.GetComponent<TankMoverConstruction>();
         _renderer = gameObject.GetComponent<SpriteRenderer>();
         Move(Direction.Down);
     }
@@ -34,27 +36,22 @@ public class TankControllerConstruction : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
+        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             Move(Direction.Left);
         }
-        else if (Input.GetKey(KeyCode.S) || Input.GetKey(KeyCode.DownArrow))
+        else if (Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.DownArrow))
         {
             Move(Direction.Down);
         }
-        else if (Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow))
+        else if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
         {
             Move(Direction.Right);
         }
-        else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
+        else if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             Move(Direction.Up);
         }
-
-        //if (Input.GetKey(KeyCode.Space))
-        //{
-        //    Fire();
-        //}
     }
 
     private void Move(Direction direction)
@@ -70,15 +67,10 @@ public class TankControllerConstruction : MonoBehaviour
             _ => _renderer.sprite
         };
     }
-
-    //private void Fire()
-    //{
-    //    var b = new Bullet
-    //    {
-    //        Direction = _tank.Direction,
-    //        Tank = _tank,
-    //        InitialPosition = _tank.Position
-    //    };
-    //    GetComponent<TankFirer>().Fire(b);
-    //}
+    public Vector3Int ConvertToGridPosition(Vector3 position)
+    {
+        int gridX = (int)Mathf.FloorToInt(position.x / cellSize.x);
+        int gridY = (int)Mathf.FloorToInt(position.y / cellSize.y);
+        return new Vector3Int(gridX, gridY, 0);
+    }
 }
