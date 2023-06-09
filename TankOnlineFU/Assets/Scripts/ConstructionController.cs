@@ -42,9 +42,7 @@ public class ConstructionController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.X))
         {
-            tank.GetComponent<BoxCollider2D>().enabled = false;
             tilemap.SetTile(posMaterial, null);
-            Debug.Log(index);
             if(index < tiles.Length)
             {
                 tilemap.SetTile(posMaterial, tiles[index]);
