@@ -13,6 +13,10 @@ TagManager:
   - BaseMap
   - Water
   - Background_Menu
+  - tank_2
+  - tank_3
+  - tank_4
+  - tank
   layers:
   - Default
   - TransparentFX
