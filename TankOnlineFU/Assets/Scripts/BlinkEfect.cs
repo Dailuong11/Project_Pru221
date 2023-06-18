@@ -8,7 +8,6 @@ public class BlinkEfect : MonoBehaviour
     public Color endColor = Color.black;
     [Range(0, 10)]
     public float speed = 1;
-
     Renderer ren;
 
     private void Awake()
