@@ -17,6 +17,10 @@ TagManager:
   - tank_3
   - tank_4
   - tank
+  - Item_PowerUp_Shot
+  - Item_PowerUp_Shield
+  - Item_PowerUp_Health
+  - Item_PowerUp_Speed
   layers:
   - Default
   - TransparentFX

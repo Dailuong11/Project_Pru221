@@ -8,8 +8,6 @@ public class TankMover : MonoBehaviour
 {
     // Start is called before the first frame update
 
-    public float speed;
-
     private float screenLeft;
     private float screenRight;
     private float screenTop;
@@ -17,7 +15,6 @@ public class TankMover : MonoBehaviour
 
     void Start()
     {
-        speed = 1;
         saveScreenSize();
     }
 
@@ -27,7 +24,7 @@ public class TankMover : MonoBehaviour
     }
 
 
-    public Vector3 Move(Direction direction)
+    public Vector3 Move(Direction direction, float speed)
     {
         var currentPos = gameObject.transform.position;
         switch (direction)
