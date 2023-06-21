@@ -170,7 +170,6 @@ public class TankController : MonoBehaviour
     private void CreateShieldForTank()
     {
         _timerShield.run();
-        Debug.Log("Start");
         toggleCoroutineShield = StartCoroutine(ToggleShield());
     }
 

@@ -1560,6 +1560,7 @@ GameObject:
   - component: {fileID: 284169416}
   - component: {fileID: 284169418}
   - component: {fileID: 284169417}
+  - component: {fileID: 284169419}
   m_Layer: 0
   m_Name: Map0
   m_TagString: Untagged
@@ -1849,6 +1850,24 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!114 &284169419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 284169415}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d9aaaf41965384fae0ee2ba8784b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 284169418}
+  items:
+  - {fileID: 11400000, guid: 96c3af60c45ca0f4fba8d589ae3ce9a1, type: 2}
+  - {fileID: 11400000, guid: fd7cf10f40a904646bf83578f7adc3ca, type: 2}
+  - {fileID: 11400000, guid: a907505fe37c450418d393831b134e02, type: 2}
+  - {fileID: 11400000, guid: acbfac50520f4684abbe71965a63dcb4, type: 2}
 --- !u!4 &291919070 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1704014868102561536, guid: b3ce57a1adeff8c47b19da493631e1fc, type: 3}
@@ -10549,7 +10568,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185695495001854551, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
       propertyPath: m_TagString
-      value: tank_2
+      value: tank
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}

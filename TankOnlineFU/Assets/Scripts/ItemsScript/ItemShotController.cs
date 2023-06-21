@@ -4,18 +4,20 @@ using UnityEngine;
 
 public class ItemShotController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private float creationTime;
     void Start()
     {
-        
+        creationTime = Time.time;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        
+        float timeSinceCreation = Time.time - creationTime;
+        if(timeSinceCreation >= 20f)
+        {
+            Destroy(gameObject);
+        }
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.tag == "tank")
