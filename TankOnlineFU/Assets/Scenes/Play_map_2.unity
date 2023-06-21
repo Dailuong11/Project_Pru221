@@ -10187,18 +10187,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1456996116270586396, guid: 60bbf050e17b93d44a68879ab6c1b8fb, type: 3}
   m_PrefabInstance: {fileID: 1776715761}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1776715764
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1776715763}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 99bf85ef4b20e754fa59893bb3b7f60f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &1776715765
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -10241,6 +10229,19 @@ MonoBehaviour:
   fadein: 0
   fadeout: 0
   TimeToFade: 1
+--- !u!114 &1776715767
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1776715763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dad4501dadbb004fa90085f023667d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nameScene: Play_map_3
 --- !u!4 &1777704500 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2163053768927476261, guid: 60cb4b82f05c4334faa86ca13f939f22, type: 3}
@@ -10549,7 +10550,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2185695495001854551, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
       propertyPath: m_TagString
-      value: tank_2
+      value: Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
