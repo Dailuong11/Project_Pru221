@@ -16,7 +16,7 @@ EditorBuildSettings:
     guid: b2d5a27e1dd87ba4180f4fdf5f1573c7
   - enabled: 1
     path: Assets/Scenes/Construction.unity
-    guid: 4f716fe19522dd5419eb7f10f944a012
+    guid: a364da826f224da45ae706915d5b5bd7
   - enabled: 1
     path: Assets/Scenes/Play_map_2.unity
     guid: 35457807b5babbe4d83cc5824a0ee925
@@ -26,4 +26,19 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Play_map_4.unity
     guid: de70a8605acaa5240ac2f21c0e7bf039
+  - enabled: 1
+    path: Assets/Scenes/Load_Map_1.unity
+    guid: 4ec0914ba494e2041bcbfca65d4e77cc
+  - enabled: 1
+    path: Assets/Scenes/Load_Map_2.unity
+    guid: a9ecacdf5cb9b4a41a327bb6374bf2a3
+  - enabled: 1
+    path: Assets/Scenes/Load_Map_3.unity
+    guid: f3a9f2971fe9ef34cb95d6a303f49b24
+  - enabled: 1
+    path: Assets/Scenes/Load_Map_4.unity
+    guid: 489f44baf3f448d42ae5a4a1911b7dd6
+  - enabled: 1
+    path: Assets/Scenes/Load_Map.unity
+    guid: 4f716fe19522dd5419eb7f10f944a012
   m_configObjects: {}
