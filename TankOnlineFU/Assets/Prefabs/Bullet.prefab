@@ -147,3 +147,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explore: {fileID: 7459787069134969508, guid: 8b4a688383c16244786242869cb915f0, type: 3}
+  exploreSoundEffect: {fileID: 0}

@@ -8,7 +8,6 @@ public class BulletController : MonoBehaviour
 {
     public Bullet Bullet { get; set; }
     
-    public GameObject explore;
     public int MaxRange { get; set; }
 
     // Start is called before the first frame update
@@ -26,11 +25,13 @@ public class BulletController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Brick" || collision.gameObject.tag == "Wall_Steel")
         {
-            var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
+        
 
             Destroy(gameObject);
 
-            Destroy(obj,0.2f);
+            
+
+
         }
     }
 
