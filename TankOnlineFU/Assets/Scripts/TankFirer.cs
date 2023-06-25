@@ -7,6 +7,7 @@ namespace DefaultNamespace
     public class TankFirer : MonoBehaviour
     {
         public GameObject bulletPrefab;
+
         public Sprite spriteRight;
         public Sprite spriteLeft;
         public Sprite spriteUp;
@@ -15,6 +16,7 @@ namespace DefaultNamespace
         public int maxRange;
         public float delay;
         public float lastFire = 0f;
+        [SerializeField] private AudioSource fireSoundEffect;
 
         private void Start()
         {
@@ -23,7 +25,7 @@ namespace DefaultNamespace
         private void Update()
         {
         }
-
+     
         public void Fire(Bullet b)
         {
             // Debug.Log("FIre: "+Time.time);
@@ -63,7 +65,7 @@ namespace DefaultNamespace
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-
+            fireSoundEffect.Play();
             rigidBody2d.AddForce(force, ForceMode2D.Impulse);
             lastFire = Time.time;
         }
