@@ -52,6 +52,7 @@ public class TankController : MonoBehaviour
         else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             Move(Direction.Up);
+
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -59,7 +60,6 @@ public class TankController : MonoBehaviour
             Fire();
         }
     }
-
     private void Move(Direction direction)
     {
         _tank.Position = _tankMover.Move(direction);
@@ -84,4 +84,10 @@ public class TankController : MonoBehaviour
         };
         GetComponent<TankFirer>().Fire(b);
     }
+    // Start is called before the first frame update
+  
+
+   
+
+
 }
