@@ -683,6 +683,7 @@ GameObject:
   - component: {fileID: 1973370916}
   - component: {fileID: 1973370915}
   - component: {fileID: 1973370917}
+  - component: {fileID: 1973370918}
   m_Layer: 0
   m_Name: Map0
   m_TagString: Untagged
@@ -808,6 +809,24 @@ MonoBehaviour:
   treePrefab: {fileID: 458115750905727847, guid: bf459f54d5b9b6e408e2d4b57c916eba, type: 3}
   brickPrefab: {fileID: 8431482890676471422, guid: b3ce57a1adeff8c47b19da493631e1fc, type: 3}
   waterPrefab: {fileID: 2163053768927476262, guid: 60cb4b82f05c4334faa86ca13f939f22, type: 3}
+--- !u!114 &1973370918
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973370913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00d9aaaf41965384fae0ee2ba8784b84, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tilemap: {fileID: 1973370916}
+  items:
+  - {fileID: 11400000, guid: 96c3af60c45ca0f4fba8d589ae3ce9a1, type: 2}
+  - {fileID: 11400000, guid: fd7cf10f40a904646bf83578f7adc3ca, type: 2}
+  - {fileID: 11400000, guid: a907505fe37c450418d393831b134e02, type: 2}
+  - {fileID: 11400000, guid: acbfac50520f4684abbe71965a63dcb4, type: 2}
 --- !u!1 &2108852166
 GameObject:
   m_ObjectHideFlags: 0

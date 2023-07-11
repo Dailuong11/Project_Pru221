@@ -13,7 +13,7 @@ public class SpawnItem : MonoBehaviour
     private float screenBottom;
     private Vector3 cellSize;
     private Timer timer;
-    private float timeSpawnItem = 15;
+    private float timeSpawnItem = 3;
     private List<Vector3Int> listPos;
     void Start()
     {
@@ -37,6 +37,7 @@ public class SpawnItem : MonoBehaviour
                 GameObject childObject = childTransform.gameObject;
                 Vector3Int materialPos = ConvertToGridPosition(childObject.transform.position);
                 listPos.Add(materialPos);
+                Debug.Log(materialPos);
             }
             do
             {
