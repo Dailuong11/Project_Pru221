@@ -203,7 +203,7 @@ GameObject:
   - component: {fileID: 332366332}
   - component: {fileID: 332366331}
   m_Layer: 5
-  m_Name: Construction
+  m_Name: Map 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Construction
+  m_text: Map 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
   m_sharedMaterial: {fileID: -5926192030507612215, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
@@ -339,7 +339,7 @@ GameObject:
   - component: {fileID: 630354090}
   - component: {fileID: 630354089}
   m_Layer: 5
-  m_Name: Button Construction
+  m_Name: Button map 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -363,7 +363,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -115}
+  m_AnchoredPosition: {x: 0, y: -60}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &630354089
@@ -410,9 +410,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 966716635}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: SaveMap
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: Map
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -472,7 +472,7 @@ GameObject:
   - component: {fileID: 692522901}
   - component: {fileID: 692522900}
   m_Layer: 5
-  m_Name: Quit
+  m_Name: Map 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -518,7 +518,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Exit
+  m_text: 'Map 4
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
   m_sharedMaterial: {fileID: -5926192030507612215, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
@@ -607,7 +609,7 @@ GameObject:
   - component: {fileID: 827027506}
   - component: {fileID: 827027505}
   m_Layer: 5
-  m_Name: Load
+  m_Name: Map 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -653,7 +655,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Load Map
+  m_text: Map 2
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
   m_sharedMaterial: {fileID: -5926192030507612215, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
@@ -743,7 +745,7 @@ GameObject:
   - component: {fileID: 908223699}
   - component: {fileID: 908223698}
   m_Layer: 5
-  m_Name: Button Play
+  m_Name: Button map 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -814,9 +816,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 966716635}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Play
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: OnButtonClick
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -877,7 +879,7 @@ GameObject:
   - component: {fileID: 909482992}
   - component: {fileID: 909482991}
   m_Layer: 5
-  m_Name: Button Quit
+  m_Name: Button map 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -901,7 +903,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -222.2}
+  m_AnchoredPosition: {x: 0.5, y: -146}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &909482991
@@ -948,9 +950,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 966716635}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: QuitGame
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: Map
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1051,50 +1053,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857f506e4e1dce34bae8a83bf2c1300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1037887412
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1037887414}
-  - component: {fileID: 1037887413}
-  m_Layer: 0
-  m_Name: GameController
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1037887413
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037887412}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d8f524840a69d2f4c8bebfbe0a91b645, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!4 &1037887414
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1037887412}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 960, y: 278, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1118388121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,7 +1065,7 @@ GameObject:
   - component: {fileID: 1118388124}
   - component: {fileID: 1118388123}
   m_Layer: 5
-  m_Name: Play
+  m_Name: Map 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1153,9 +1111,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Play
-
-'
+  m_text: Map 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
   m_sharedMaterial: {fileID: -5926192030507612215, guid: 5bc7a93f927c0a1458ad1c510257db22, type: 2}
@@ -1374,7 +1330,7 @@ GameObject:
   - component: {fileID: 1582571142}
   - component: {fileID: 1582571141}
   m_Layer: 5
-  m_Name: Button Load
+  m_Name: Button map 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1398,7 +1354,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 26}
   m_SizeDelta: {x: 300, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1582571141
@@ -1445,9 +1401,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 966716635}
-        m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: LoadMap
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ButtonController, Assembly-CSharp
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1752,6 +1708,55 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
+--- !u!1 &2004554528
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2004554530}
+  - component: {fileID: 2004554529}
+  m_Layer: 0
+  m_Name: ButtonController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2004554529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004554528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86578ee890313504fbd1c1446fc5c395, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 908223698}
+  - {fileID: 1582571141}
+  - {fileID: 630354089}
+  - {fileID: 909482991}
+--- !u!4 &2004554530
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2004554528}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 278, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2033838640
 GameObject:
   m_ObjectHideFlags: 0
