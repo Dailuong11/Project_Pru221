@@ -684,7 +684,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 191088532}
         m_TargetAssemblyTypeName: Menu, Assembly-CSharp
-        m_MethodName: Return
+        m_MethodName: ReturnConstruction
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -987,6 +987,14 @@ PrefabInstance:
       propertyPath: camera
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 1799384047, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988430385, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1072091300885886469, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -1038,6 +1046,7 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 711902216727361652, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
     - {fileID: 658675346, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+    - {fileID: 658675345, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
 --- !u!1 &1857416424
 GameObject:

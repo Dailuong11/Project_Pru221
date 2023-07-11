@@ -14,6 +14,7 @@ public class SaveMap : MonoBehaviour
         public List<Vector3> listTree;
         public List<Vector3> listBrick;
         public List<Vector3> listWater;
+        public List<Vector3> Appear;
     }
 
     [SerializeField]
@@ -24,7 +25,8 @@ public class SaveMap : MonoBehaviour
     private GameObject[] lBrick;
     [SerializeField]
     private GameObject[] lWater;
-
+    [SerializeField]
+    private GameObject[] appear;
     public void SaveNewMap()
     {
         MapData mapData = new MapData();
@@ -58,7 +60,7 @@ public class SaveMap : MonoBehaviour
         }
 
         string json = JsonUtility.ToJson(mapData);
-        File.WriteAllText("map.json", json);
+        File.WriteAllText("Assets//map4.json", json);
         SceneManager.LoadScene("Menu");
     }
 }

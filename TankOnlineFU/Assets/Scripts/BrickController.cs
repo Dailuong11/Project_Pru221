@@ -19,11 +19,14 @@ public class BrickController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        BrickHealth--;
-        if(BrickHealth <= 0)
+        if(collision.gameObject.tag == "bullet")
         {
-            Destroy(gameObject);
-        }
+            BrickHealth--;
+            if (BrickHealth <= 0)
+            {
+                Destroy(gameObject);
+            }
+        }    
     }
 
 }
