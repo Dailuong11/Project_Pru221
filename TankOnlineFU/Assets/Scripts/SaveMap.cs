@@ -60,7 +60,7 @@ public class SaveMap : MonoBehaviour
         }
 
         string json = JsonUtility.ToJson(mapData);
-        File.WriteAllText("Assets//map4.json", json);
+        File.WriteAllText("Assets//map.json", json);
         SceneManager.LoadScene("Menu");
     }
 }

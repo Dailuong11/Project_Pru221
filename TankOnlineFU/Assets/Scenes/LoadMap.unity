@@ -682,7 +682,7 @@ GameObject:
   - component: {fileID: 1973370914}
   - component: {fileID: 1973370916}
   - component: {fileID: 1973370915}
-  - component: {fileID: 1973370917}
+  - component: {fileID: 1973370918}
   m_Layer: 0
   m_Name: Map0
   m_TagString: Untagged
@@ -792,7 +792,7 @@ Tilemap:
     e31: 0
     e32: 0
     e33: 1
---- !u!114 &1973370917
+--- !u!114 &1973370918
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -801,7 +801,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1973370913}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4980f9cbb79b7d14885e3abbf4b316f3, type: 3}
+  m_Script: {fileID: 11500000, guid: 3c0f9855da3ba1d4e9afa7712af4a2e9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   steelPrefab: {fileID: 162522485354361508, guid: 224cc7d3fef9c8746b3771ff3261654e, type: 3}
