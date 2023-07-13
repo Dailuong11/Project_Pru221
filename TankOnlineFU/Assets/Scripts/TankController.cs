@@ -36,7 +36,7 @@ public class TankController : MonoBehaviour
             Point = 0,
             Damage = DefaultDamage,
             Speed = DefaulSpeed,
-            Position = new Vector3(0,-1,0),
+            Position = new Vector3(0, -1, 0),
             Guid = GUID.Generate()
         };
         gameObject.transform.position = _tank.Position;
@@ -71,7 +71,6 @@ public class TankController : MonoBehaviour
         else if (Input.GetKey(KeyCode.W) || Input.GetKey(KeyCode.UpArrow))
         {
             Move(Direction.Up);
-
         }
 
         if (Input.GetKey(KeyCode.Space))
@@ -79,24 +78,24 @@ public class TankController : MonoBehaviour
             Fire();
         }
 
-        if(_timerDamage.Finished)
+        if (_timerDamage.Finished)
         {
-            _tank.Damage = DefaultDamage; 
+            _tank.Damage = DefaultDamage;
             _timerDamage.Duration = TimeItem;
         }
 
-        if(_timerSpeed.Finished)
+        if (_timerSpeed.Finished)
         {
             _tank.Speed = DefaulSpeed;
             _timerSpeed.Duration = TimeItem;
         }
 
-        if(_timerShield.Finished)
+        if (_timerShield.Finished)
         {
             if (toggleCoroutineShield != null)
             {
                 StopCoroutine(toggleCoroutineShield);
-                if(shield_1.activeSelf == true || shield_2.activeSelf == true)
+                if (shield_1.activeSelf == true || shield_2.activeSelf == true)
                 {
                     shield_1.SetActive(false);
                     shield_2.SetActive(false);
@@ -104,6 +103,7 @@ public class TankController : MonoBehaviour
             }
         }
     }
+
     private void Move(Direction direction)
     {
         _tank.Position = _tankMover.Move(direction, _tank.Speed);
@@ -131,16 +131,19 @@ public class TankController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "Item_PowerUp_Shot")
-        {      
+        if (collision.gameObject.tag == "Item_PowerUp_Shot")
+        {
             IncreaseDamageForTank();
-        } else if(collision.gameObject.tag == "Item_PowerUp_Health")
+        }
+        else if (collision.gameObject.tag == "Item_PowerUp_Health")
         {
             IncreaseHpForTank();
-        } else if(collision.gameObject.tag == "Item_PowerUp_Speed")
+        }
+        else if (collision.gameObject.tag == "Item_PowerUp_Speed")
         {
             IncreaseSpeedForTank();
-        } else if(collision.gameObject.tag == "Item_PowerUp_Shield")
+        }
+        else if (collision.gameObject.tag == "Item_PowerUp_Shield")
         {
             CreateShieldForTank();
         }
