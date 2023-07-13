@@ -18,15 +18,13 @@ public class ConstructionController : MonoBehaviour
 
     private int index;
     private Vector3Int posTemp;
-    private Vector2 cellSize;
-    private Vector2Int gridSize;
+    private Vector3 cellSize;
     Vector3Int posMaterial;
     // Start is called before the first frame update
     void Start()
     {
         index = 0;
-        cellSize = new Vector2(0.32f, 0.32f);
-        gridSize = new Vector2Int(12, 26);
+        cellSize = tilemap.cellSize;
     }
 
     // Update is called once per frame

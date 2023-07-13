@@ -1,30 +1,40 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public void Play()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-    }
+   
 
-    public void LoadMap()
+    public void Map()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 2);
-    }
-    public void ConstructionMap()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 3);
+        //SceneManager.LoadScene("Menu");
     }
     public void Return()
     {
         SceneManager.LoadScene("Menu");
     }
+    public void ReturnConstruction()
+    {
+        SceneManager.LoadScene("Menu");
+    }
+    public void SaveMap()
+    {
+        SceneManager.LoadScene("SaveMap");
+    }
+    public void Play()
+    {
+       int id = PlayerPrefs.GetInt("id");
+        SceneManager.LoadScene("Play");
+    }
+    public void LoadMap()
+    {
+        SceneManager.LoadScene("LoadMap");
+    }
     public void QuitGame()
     {
-        Application.Quit();
+        SceneManager.LoadScene("First_Map");
     }
 }

@@ -39,7 +39,8 @@ public class LoadMapSave : MonoBehaviour
 
     public void LoadMapFromFile()
     {
-        string filePath = "map.json";
+        int id = PlayerPrefs.GetInt("id");
+        string filePath = "Assets//map" + id + ".json";
         if (File.Exists(filePath))
         {
             string json = File.ReadAllText(filePath);
