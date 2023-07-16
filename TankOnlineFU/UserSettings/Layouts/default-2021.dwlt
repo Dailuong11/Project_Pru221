@@ -20,6 +20,7 @@ MonoBehaviour:
     height: 772.8
   m_ShowMode: 4
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_Title: Project
   m_RootView: {fileID: 2}
 <<<<<<< HEAD
@@ -32,6 +33,10 @@ MonoBehaviour:
   m_Title: Scene
   m_RootView: {fileID: 3}
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+  m_Title: Project
+  m_RootView: {fileID: 2}
+>>>>>>> parent of 6c7386e (Heal Bar UI)
   m_MinSize: {x: 875, y: 371}
 >>>>>>> parent of 6c7386e (Heal Bar UI)
   m_MaxSize: {x: 10000, y: 10000}
@@ -133,7 +138,11 @@ MonoBehaviour:
   vertical: 0
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 17
+=======
+  controlID: 13913
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
   controlID: 13913
 >>>>>>> parent of 6c7386e (Heal Bar UI)
@@ -159,6 +168,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     width: 1172.8
@@ -188,6 +198,14 @@ MonoBehaviour:
   vertical: 0
   controlID: 93
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+    width: 1167.2
+    height: 722.8
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 16192, y: 16192}
+  vertical: 1
+  controlID: 13880
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -202,6 +220,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Children:
   - {fileID: 8}
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
   - {fileID: 11}
@@ -234,6 +253,9 @@ MonoBehaviour:
 <<<<<<< HEAD
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
+  - {fileID: 9}
+>>>>>>> parent of 6c7386e (Heal Bar UI)
   m_Position:
     serializedVersion: 2
     x: 0
@@ -252,6 +274,7 @@ MonoBehaviour:
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
 <<<<<<< HEAD
+<<<<<<< HEAD
   controlID: 13881
 >>>>>>> parent of 6c7386e (Heal Bar UI)
 --- !u!114 &8
@@ -259,6 +282,10 @@ MonoBehaviour:
   controlID: 95
 --- !u!114 &9
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+  controlID: 13881
+--- !u!114 &8
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -284,6 +311,9 @@ MonoBehaviour:
 =======
     width: 233.6
     height: 472
+<<<<<<< HEAD
+>>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
@@ -293,6 +323,7 @@ MonoBehaviour:
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
+<<<<<<< HEAD
 <<<<<<< HEAD
 =======
     width: 1167.2
@@ -341,6 +372,8 @@ MonoBehaviour:
 --- !u!114 &9
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -360,6 +393,7 @@ MonoBehaviour:
     width: 933.6
     height: 472
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 202, y: 221}
   m_MaxSize: {x: 4002, y: 4021}
   m_ActualView: {fileID: 14}
@@ -374,6 +408,14 @@ MonoBehaviour:
 <<<<<<< HEAD
 >>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
+>>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 14}
+  m_Panes:
+  - {fileID: 12}
+  - {fileID: 14}
 >>>>>>> parent of 6c7386e (Heal Bar UI)
   m_Selected: 1
   m_LastSelected: 0
@@ -425,6 +467,7 @@ MonoBehaviour:
     height: 722.8
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   m_MinSize: {x: 275, y: 50}
   m_MaxSize: {x: 4000, y: 4000}
   m_ActualView: {fileID: 12}
@@ -443,11 +486,20 @@ MonoBehaviour:
   m_ActualView: {fileID: 17}
   m_Panes:
 >>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 17}
+  m_Panes:
+>>>>>>> parent of 6c7386e (Heal Bar UI)
   - {fileID: 17}
   - {fileID: 18}
   m_Selected: 0
   m_LastSelected: 1
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
@@ -473,6 +525,7 @@ MonoBehaviour:
     serializedVersion: 2
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     x: 1172.8
     y: 73.6
     width: 362.19995
@@ -480,6 +533,10 @@ MonoBehaviour:
 =======
     x: 233.6
     y: 73.6
+=======
+    x: 233.6
+    y: 73.6
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
     x: 233.6
     y: 73.6
@@ -572,6 +629,9 @@ MonoBehaviour:
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
 <<<<<<< HEAD
+<<<<<<< HEAD
+>>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
@@ -610,6 +670,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_SelectedIDs: 52140000
       m_LastClickedID: 0
       m_ExpandedIDs: 1cfbffff
@@ -628,20 +689,25 @@ MonoBehaviour:
       m_LastClickedID: -3938
       m_ExpandedIDs: a8f0ffffbef0ffff22f7ffff38f7ffff2afbffff
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+      m_SelectedIDs: 825e0000
+      m_LastClickedID: 0
+      m_ExpandedIDs: 125afeff7c58ffffce92ffff5eb8ffff2afbffff58eb0000
+>>>>>>> parent of 6c7386e (Heal Bar UI)
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Canvas
-        m_OriginalName: Canvas
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -3928
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -675,9 +741,12 @@ MonoBehaviour:
     y: 73.6
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     width: 880.4
     height: 407
 =======
+=======
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
     width: 931.6
@@ -748,7 +817,7 @@ MonoBehaviour:
       containerId: overlay-toolbar__top
       floating: 0
       collapsed: 0
-      displayed: 0
+      displayed: 1
       snapOffset: {x: 0, y: 25}
       snapOffsetDelta: {x: 0, y: 0}
       snapCorner: 0
@@ -968,6 +1037,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: {x: -23.26762, y: -2.0356846, z: -0.23405024}
     speed: 2
     m_Value: {x: -23.26762, y: -2.0356846, z: -0.23405024}
@@ -986,6 +1056,11 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 941.6523, y: 532.6285, z: 2.2650368}
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+    m_Target: {x: -0.6161476, y: -1.0097247, z: -0.017480876}
+    speed: 2
+    m_Value: {x: -0.6161476, y: -1.0097247, z: -0.017480876}
+>>>>>>> parent of 6c7386e (Heal Bar UI)
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1039,6 +1114,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_Target: 33.405018
     speed: 2
     m_Value: 33.405018
@@ -1057,6 +1133,11 @@ MonoBehaviour:
     speed: 2
     m_Value: 874.9497
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+    m_Target: 1.8418256
+    speed: 2
+    m_Value: 1.8418256
+>>>>>>> parent of 6c7386e (Heal Bar UI)
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1082,6 +1163,7 @@ MonoBehaviour:
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
 --- !u!114 &15
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 MonoBehaviour:
@@ -1181,6 +1263,8 @@ MonoBehaviour:
 >>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
+=======
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1243,6 +1327,7 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
 <<<<<<< HEAD
+<<<<<<< HEAD
     scrollPos: {x: 0, y: 0}
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -1265,6 +1350,12 @@ MonoBehaviour:
     m_LastClickedID: 24890
     m_ExpandedIDs: 00000000286100002a6100002c6100002e610000
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: e45e0000
+    m_LastClickedID: 24292
+    m_ExpandedIDs: 000000006a5e00006c5e000072c40000aec40000
+>>>>>>> parent of 6c7386e (Heal Bar UI)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: Prefabs
@@ -1295,6 +1386,7 @@ MonoBehaviour:
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     m_ExpandedIDs: 00000000745e0000765e0000785e00007a5e00007c5e00007e5e0000
 =======
     m_ExpandedIDs: 000000006a5e00006c5e0000
@@ -1305,6 +1397,9 @@ MonoBehaviour:
 =======
     m_ExpandedIDs: 00000000286100002a6100002c6100002e610000
 >>>>>>> parent of 846782f (Update default-2021.dwlt)
+=======
+    m_ExpandedIDs: 000000006a5e00006c5e0000
+>>>>>>> parent of 6c7386e (Heal Bar UI)
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1350,7 +1445,11 @@ MonoBehaviour:
       m_IsRenamingFilename: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
       m_ClientGUIView: {fileID: 0}
+=======
+      m_ClientGUIView: {fileID: 10}
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
       m_ClientGUIView: {fileID: 10}
 >>>>>>> parent of 6c7386e (Heal Bar UI)
@@ -1364,7 +1463,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 8.200012}
+    m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 64
   m_SkipHiddenPackages: 0
   m_DirectoriesAreaWidth: 207
@@ -1399,7 +1498,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> parent of 6c7386e (Heal Bar UI)
 =======
 >>>>>>> parent of 6c7386e (Heal Bar UI)
 --- !u!114 &17
@@ -1438,7 +1540,7 @@ MonoBehaviour:
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 1026
+  m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
   m_LockTracker:
