@@ -10,7 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 353604643620958008}
   - component: {fileID: 1104279190621613927}
+  - component: {fileID: -609223240192224959}
   - component: {fileID: 1445588235494078850}
+  - component: {fileID: -5800024642600652770}
+  - component: {fileID: -8374432765600182347}
+  - component: {fileID: 2189940046865978215}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -74,7 +78,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 2555fa61700434466ae3a26a9fe66df0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 40340202bbb4d49cdbe9a74f1c0d6f8c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -85,6 +89,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &-609223240192224959
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_BodyType: 0
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 0
+  m_Material: {fileID: 6200000, guid: 10f92050e9fc7421083f41740fcf2a2b, type: 2}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!61 &1445588235494078850
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -94,7 +119,7 @@ BoxCollider2D:
   m_GameObject: {fileID: 2178223789173475439}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 10f92050e9fc7421083f41740fcf2a2b, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
@@ -111,3 +136,56 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2384996, y: 0.2384997}
   m_EdgeRadius: 0
+--- !u!114 &-5800024642600652770
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ce52482f72ca442e6b3880f73fb4f360, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &-8374432765600182347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb23512406054bfebb417dfedf21e7a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrefab: {fileID: 7740309687340280598, guid: 1eaa100cee44c4f839e12948bcb5c44a, type: 3}
+  spriteRight: {fileID: 21300000, guid: 97ce0d674edfe418cabcd19ce0f5b6da, type: 3}
+  spriteLeft: {fileID: 21300000, guid: 6783b99fa46ad430680016ebeb8ea713, type: 3}
+  spriteUp: {fileID: 21300000, guid: 27a8e2e75693e4e69ade2de1a9ac6ce3, type: 3}
+  spriteDown: {fileID: 21300000, guid: c809315d9e24d474ba994bee424cf98c, type: 3}
+  speed: 2
+  maxRange: 10
+  delay: 1
+  lastFire: 0
+--- !u!114 &2189940046865978215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2178223789173475439}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a39883fe1430543f492e352fc7209104, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shield_1: {fileID: 0}
+  shield_2: {fileID: 0}
+  tankUp: {fileID: 21300000, guid: 6469a73ce54d24ba2ae0c154b82c05ae, type: 3}
+  tankDown: {fileID: 21300000, guid: 40340202bbb4d49cdbe9a74f1c0d6f8c, type: 3}
+  tankLeft: {fileID: 21300000, guid: 186008ac8913e41e89173c9da92c24c6, type: 3}
+  tankRight: {fileID: 21300000, guid: 1e69378c2eb4c4faa888c03510b060aa, type: 3}
+  interval: 1
+  isRunning: 1
