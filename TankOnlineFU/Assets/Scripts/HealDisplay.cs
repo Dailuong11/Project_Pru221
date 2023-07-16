@@ -1,4 +1,4 @@
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI ;
@@ -21,24 +21,53 @@ public class HealDisplay : MonoBehaviour
     }
 
     // Update is called once per frame
+    //void Update()
+    //{
+    //    health = playerHealth.health;
+    //    maxHealth = playerHealth.maxhealth;
+    //    for (int i =0; i < heart.Length; i++)
+    //    {
+    //        if (i < health)
+    //        {
+    //            heart[i].sprite = fullHeart;
+    //        }else heart[i].sprite = emptyHeart;
+    //        if (i< maxHealth)
+    //        {
+    //            heart[i].enabled = true;
+    //        }
+    //        else
+    //        {
+    //            heart[i].enabled = false;
+    //        }
+    //    }
+    //}
     void Update()
     {
         health = playerHealth.health;
         maxHealth = playerHealth.maxhealth;
-        for (int i =0; i < heart.Length; i++)
+        for (int i = 0; i < heart.Length; i++)
         {
-            if (i < health)
+            if (heart[i] != null) // Kiểm tra null trước khi gán sprite
             {
-                heart[i].sprite = fullHeart;
-            }else heart[i].sprite = emptyHeart;
-            if (i< maxHealth)
-            {
-                heart[i].enabled = true;
-            }
-            else
-            {
-                heart[i].enabled = false;
+                if (i < health)
+                {
+                    heart[i].sprite = fullHeart;
+                }
+                else
+                {
+                    heart[i].sprite = emptyHeart;
+                }
+
+                if (i < maxHealth)
+                {
+                    heart[i].enabled = true;
+                }
+                else
+                {
+                    heart[i].enabled = false;
+                }
             }
         }
     }
+
 }

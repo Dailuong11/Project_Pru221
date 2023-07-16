@@ -49,8 +49,8 @@ public class TankController : MonoBehaviour
         _timerDamage.Duration = TimeItem;
         _timerSpeed.Duration = TimeItem;
         _timerShield.Duration = TimeItem;
-        shield_1.SetActive(false);
-        shield_2.SetActive(false);
+      //  shield_1.SetActive(false);
+       // shield_2.SetActive(false);
     }
 
     // Update is called once per frame
