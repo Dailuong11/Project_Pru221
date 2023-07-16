@@ -7,8 +7,8 @@ using UnityEngine.UI ;
 public class HealDisplay : MonoBehaviour
 {
     // Start is called before the first frame update
-    public int health;
-    public int maxHealth;
+    public int health =3;
+    public int maxHealth = 3;
 
     public Sprite emptyHeart;
     public Sprite fullHeart;
