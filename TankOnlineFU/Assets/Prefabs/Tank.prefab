@@ -138,7 +138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -244.5, y: 184}
+  m_AnchoredPosition: {x: -116, y: 388}
   m_SizeDelta: {x: 29.8875, y: 33.2103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1503571964
@@ -214,7 +214,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -280.9, y: 184}
+  m_AnchoredPosition: {x: -165, y: 389}
   m_SizeDelta: {x: 29.8875, y: 33.2103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1879830329
@@ -290,7 +290,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -317, y: 184}
+  m_AnchoredPosition: {x: -215, y: 389}
   m_SizeDelta: {x: 29.8875, y: 33.2103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1926375571
@@ -452,7 +452,7 @@ BoxCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2185695495001854551}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 6200000, guid: 10f92050e9fc7421083f41740fcf2a2b, type: 2}
   m_IsTrigger: 0
@@ -631,8 +631,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a3a14430556f8954aace50cc1c39bfba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
-  maxhealth: 10
+  health: 3
+  maxhealth: 3
 --- !u!114 &857210338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -645,8 +645,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48fa4d2d85db95446bb5f0b580186553, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 0
-  maxHealth: 0
+  health: 3
+  maxHealth: 3
   emptyHeart: {fileID: 21300000, guid: 2ffcdf1d4fac443a3a034eb9f57df6a0, type: 3}
   fullHeart: {fileID: 21300000, guid: 4d0c2a9b1ff6d4e87be97467fe2fc0a0, type: 3}
   heart:

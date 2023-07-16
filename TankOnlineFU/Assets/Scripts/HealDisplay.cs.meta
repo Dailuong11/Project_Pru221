@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - emptyHeart: {fileID: 21300000, guid: 2ffcdf1d4fac443a3a034eb9f57df6a0, type: 3}
   - fullHeart: {fileID: 21300000, guid: 719a54b9b07154014bc91b61477532be, type: 3}
-  - playerHealth: {fileID: -4135744086255851579, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+  - playerHealth: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
