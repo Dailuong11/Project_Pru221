@@ -37,7 +37,6 @@ public class SpawnItem : MonoBehaviour
                 GameObject childObject = childTransform.gameObject;
                 Vector3Int materialPos = ConvertToGridPosition(childObject.transform.position);
                 listPos.Add(materialPos);
-                Debug.Log(materialPos);
             }
             do
             {
