@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.Tilemaps;
 
 public class SpawnItem : MonoBehaviour
@@ -29,15 +30,22 @@ public class SpawnItem : MonoBehaviour
         if(timer.Finished)
         {
             bool isContinue = false;
-            Transform parentTransform = transform;
             listPos = new List<Vector3Int>();
-            for (int i = 0; i < parentTransform.childCount; i++)
+
+            Scene currentScene = SceneManager.GetActiveScene();
+            GameObject[] rootObjects = currentScene.GetRootGameObjects();
+            foreach (GameObject rootObject in rootObjects)
             {
-                Transform childTransform = parentTransform.GetChild(i);
-                GameObject childObject = childTransform.gameObject;
-                Vector3Int materialPos = ConvertToGridPosition(childObject.transform.position);
-                listPos.Add(materialPos);
+                if(rootObject.tag == "Brick"
+                    || rootObject.tag == "Tree"
+                    || rootObject.tag == "Water"
+                    || rootObject.tag == "Wall_Steel")
+                {
+                    Vector3Int materialPos = ConvertToGridPosition(rootObject.transform.position);
+                    listPos.Add(materialPos);
+                }
             }
+
             do
             {
                 Vector3 temp = new Vector3(Random.Range(screenLeft, screenRight), Random.Range(screenBottom, screenTop));
@@ -46,7 +54,7 @@ public class SpawnItem : MonoBehaviour
 
                 foreach (Vector3Int item in listPos)
                 {
-                    if(item.Equals(randomPosItem))
+                    if(item.x == randomPosItem.x && item.y == randomPosItem.y)
                     {
                         isExist = true;
                         break;
