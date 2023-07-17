@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 1973370917}
   - component: {fileID: 1973370918}
   - component: {fileID: 1973370919}
+  - component: {fileID: 1973370920}
   m_Layer: 0
   m_Name: Map0
   m_TagString: Untagged
@@ -881,6 +882,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tilemap: {fileID: 1973370916}
   tileEnemy: {fileID: 11400000, guid: 7d84cc7a661348b459449b98bf4eb7c8, type: 2}
+--- !u!114 &1973370920
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1973370913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a073e7ea8325b2647a924d9e70bcb70f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steelPrefab: {fileID: 162522485354361508, guid: 224cc7d3fef9c8746b3771ff3261654e, type: 3}
+  treePrefab: {fileID: 458115750905727847, guid: bf459f54d5b9b6e408e2d4b57c916eba, type: 3}
+  brickPrefab: {fileID: 8431482890676471422, guid: b3ce57a1adeff8c47b19da493631e1fc, type: 3}
+  waterPrefab: {fileID: 2163053768927476262, guid: 60cb4b82f05c4334faa86ca13f939f22, type: 3}
+  destroyedEnemyCount: 0
 --- !u!1 &2108852166
 GameObject:
   m_ObjectHideFlags: 0

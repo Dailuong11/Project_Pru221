@@ -18,7 +18,7 @@ public class SpawnEnemy : MonoBehaviour
     private float screenBottom;
     private Vector3 cellSize;
     private Timer timer;
-    private float timeSpawnEnemy = 15;
+    private float timeSpawnEnemy = 5;
     private List<Vector3Int> listPos;
 
     void Start()
