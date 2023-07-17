@@ -18,7 +18,7 @@ public class BrickController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        BrickHealth = 1;
+        BrickHealth = 2;
     }
 
     // Update is called once per frame

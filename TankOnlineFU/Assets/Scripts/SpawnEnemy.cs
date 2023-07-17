@@ -18,7 +18,7 @@ public class SpawnEnemy : MonoBehaviour
     private float screenBottom;
     private Vector3 cellSize;
     private Timer timer;
-    private float timeSpawnEnemy = 15;
+    private float timeSpawnEnemy = 3;
     private List<Vector3Int> listPos;
 
     void Start()
@@ -28,10 +28,6 @@ public class SpawnEnemy : MonoBehaviour
         timer.Duration = timeSpawnEnemy;
         timer.run();
         saveScreenSize();
-        Debug.Log("Left:" + screenLeft);
-        Debug.Log("Right:" + screenRight);
-        Debug.Log("Top:" + screenTop);
-        Debug.Log("Bottom:" + screenBottom);
     }
 
     void Update()
