@@ -8,8 +8,9 @@ using UnityEngine.UIElements;
 
 public class SpawnEnemy : MonoBehaviour
 {
-    public GameObject enemyPrefab;
     public Tilemap tilemap;
+    public RuleTile tileEnemy;
+
 
     private float screenLeft;
     private float screenRight;
@@ -27,6 +28,10 @@ public class SpawnEnemy : MonoBehaviour
         timer.Duration = timeSpawnEnemy;
         timer.run();
         saveScreenSize();
+        Debug.Log("Left:" + screenLeft);
+        Debug.Log("Right:" + screenRight);
+        Debug.Log("Top:" + screenTop);
+        Debug.Log("Bottom:" + screenBottom);
     }
 
     void Update()
@@ -53,6 +58,7 @@ public class SpawnEnemy : MonoBehaviour
             do
             {
                 Vector3 temp = new Vector3(Random.Range(screenLeft, screenRight), Random.Range(screenBottom, screenTop));
+                Debug.Log(temp);
                 Vector3Int randomPosItem = ConvertToGridPosition(temp);
                 bool isExist = false;
 
@@ -67,7 +73,7 @@ public class SpawnEnemy : MonoBehaviour
 
                 if (isExist == false)
                 {
-                    Instantiate(enemyPrefab, temp, Quaternion.identity);
+                    tilemap.SetTile(randomPosItem, tileEnemy);
                     isContinue = false;
                 }
                 else

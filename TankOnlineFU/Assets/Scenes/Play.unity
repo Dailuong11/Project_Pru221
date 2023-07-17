@@ -568,8 +568,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 359950305, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 359950307, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
       propertyPath: m_SortingOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1103304621, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
+      propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1103304623, guid: a77168ab521034ef8b7b80b9dd64708e, type: 3}
@@ -871,8 +879,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 824ab30bb15bdac4a9650eb5547d4493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2178223789173475439, guid: bb4ea6636980048bbb8428e63190d6b2, type: 3}
   tilemap: {fileID: 1973370916}
+  tileEnemy: {fileID: 11400000, guid: 7d84cc7a661348b459449b98bf4eb7c8, type: 2}
 --- !u!1 &2108852166
 GameObject:
   m_ObjectHideFlags: 0
