@@ -29,17 +29,17 @@ public class BrickController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "bullet")
+        if(collision.gameObject.tag == "bullet" || collision.gameObject.tag == "bulletEnemy")
         {
             exploreSoundEffect.Play();
             BrickHealth--;
             if (BrickHealth <= 0)
             {
 
-                var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
+                //var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
                 Destroy(gameObject);
 
-                Destroy(obj, 0.2f);
+                //Destroy(obj, 0.2f);
             }
         }
         

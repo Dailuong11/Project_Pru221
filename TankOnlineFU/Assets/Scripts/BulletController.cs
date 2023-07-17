@@ -6,72 +6,89 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    public Bullet Bullet { get; set; }
-    
-    public int MaxRange { get; set; }
+	public Bullet Bullet { get; set; }
+	public GameObject explore;
 
-    // Start is called before the first frame update
-    private void Start()
-    {
-    }
+	public int MaxRange { get; set; }
 
-    // Update is called once per frame
-    private void Update()
-    {
-        DestroyAfterRange();
-    }
+	// Start is called before the first frame update
+	private void Start()
+	{
+	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.gameObject.tag == "Brick" || collision.gameObject.tag == "Wall_Steel")
-        {
-        
+	// Update is called once per frame
+	private void Update()
+	{
+		DestroyAfterRange();
+	}
 
-            Destroy(gameObject);
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "Brick" || collision.gameObject.tag == "Wall_Steel")
+		{
+			var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
+			Destroy(gameObject);
+			Destroy(obj, 0.2f);
+		}
+		else if (collision.gameObject.tag == "bullet" || collision.gameObject.tag == "bulletEnemy")
+		{
+			var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
+			Destroy(gameObject);
+			Destroy(obj, 0.2f);
+		}
+		else if (collision.gameObject.tag == "Enemy" && Bullet.Tank.Name == "Tank")
+		{
+			Debug.Log(Bullet.Tank.Name);
+			var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
+			Destroy(gameObject);
+			Destroy(obj, 0.2f);
+		}
+		else if (collision.gameObject.tag == "tank" && Bullet.Tank.Name == "Enemy")
+		{
+			Debug.Log(Bullet.Tank.Name);
+			var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
+			Destroy(gameObject);
+			Destroy(obj, 0.2f);
+		}
+	}
 
-            
 
+	private void DestroyAfterRange()
+	{
+		var currentPos = gameObject.transform.position;
+		var initPos = Bullet.InitialPosition;
+		switch (Bullet.Direction)
+		{
+			case Direction.Down:
+				if (initPos.y - MaxRange >= currentPos.y)
+				{
+					Destroy(gameObject);
+				}
 
-        }
-    }
+				break;
+			case Direction.Up:
+				if (initPos.y + MaxRange <= currentPos.y)
+				{
+					Destroy(gameObject);
+				}
 
+				break;
+			case Direction.Left:
+				if (initPos.x - MaxRange >= currentPos.x)
+				{
+					Destroy(gameObject);
+				}
 
-    private void DestroyAfterRange()
-    {
-        var currentPos = gameObject.transform.position;
-        var initPos = Bullet.InitialPosition;
-        switch (Bullet.Direction)
-        {
-            case Direction.Down:
-                if (initPos.y - MaxRange >= currentPos.y)
-                {
-                    Destroy(gameObject);
-                }
+				break;
+			case Direction.Right:
+				if (initPos.x + MaxRange <= currentPos.x)
+				{
+					Destroy(gameObject);
+				}
 
-                break;
-            case Direction.Up:
-                if (initPos.y + MaxRange <= currentPos.y)
-                {
-                    Destroy(gameObject);
-                }
-
-                break;
-            case Direction.Left:
-                if (initPos.x - MaxRange >= currentPos.x)
-                {
-                    Destroy(gameObject);
-                }
-
-                break;
-            case Direction.Right:
-                if (initPos.x + MaxRange <= currentPos.x)
-                {
-                    Destroy(gameObject);
-                }
-
-                break;
-            default:
-                throw new ArgumentOutOfRangeException();
-        }
-    }
+				break;
+			default:
+				throw new ArgumentOutOfRangeException();
+		}
+	}
 }
