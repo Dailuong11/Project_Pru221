@@ -15,13 +15,15 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          if (Input.GetKeyDown("d"))
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bulletEnemy")
         {
-
-            takeDamage(2);
+            takeDamage(1);
         }
     }
-    public void takeDamage(int amount)
+        public void takeDamage(int amount)
     {
         health -= amount;
         if(health <= 0)

@@ -15,7 +15,6 @@ GameObject:
   - component: {fileID: -5800024642600652770}
   - component: {fileID: -8374432765600182347}
   - component: {fileID: 2189940046865978215}
-  - component: {fileID: 957983006}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -183,25 +182,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a39883fe1430543f492e352fc7209104, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  shield_1: {fileID: 0}
-  shield_2: {fileID: 0}
   tankUp: {fileID: 21300000, guid: 6469a73ce54d24ba2ae0c154b82c05ae, type: 3}
   tankDown: {fileID: 21300000, guid: 40340202bbb4d49cdbe9a74f1c0d6f8c, type: 3}
   tankLeft: {fileID: 21300000, guid: 186008ac8913e41e89173c9da92c24c6, type: 3}
   tankRight: {fileID: 21300000, guid: 1e69378c2eb4c4faa888c03510b060aa, type: 3}
   interval: 1
   isRunning: 1
---- !u!114 &957983006
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2178223789173475439}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a14430556f8954aace50cc1c39bfba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 0
-  maxhealth: 10
