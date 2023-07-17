@@ -21,9 +21,10 @@ public class TankController : MonoBehaviour
 	private Timer _timerDamage;
 	private Timer _timerSpeed;
 	private Timer _timerShield;
-	private int DefaultHealth = 10;
+	private int DefaultHealth = 3;
 	private int DefaultDamage = 1;
 	private float DefaulSpeed = 1f;
+	private bool DefaulShield = false;
 	private float TimeItem = 5;
 	private Coroutine toggleCoroutineShield;
 	private void Start()
@@ -36,6 +37,7 @@ public class TankController : MonoBehaviour
 			Point = 0,
 			Damage = DefaultDamage,
 			Speed = DefaulSpeed,
+			IsShield = DefaulShield,
 			Position = new Vector3(0, -1, 0),
 			Guid = GUID.Generate()
 		};
@@ -102,6 +104,17 @@ public class TankController : MonoBehaviour
 				}
 			}
 		}
+		PlayerPrefs.SetInt("tankDamage", GetDamage());
+		PlayerPrefs.SetInt("tankHP", GetHP());
+		Debug.Log("Tank Shield: " + _tank.IsShield);
+	}
+	public int GetDamage()
+	{
+		return _tank.Damage;
+	}
+	public int GetHP()
+	{
+		return _tank.Hp;
 	}
 
 	private void Move(Direction direction)
@@ -149,10 +162,18 @@ public class TankController : MonoBehaviour
 		}
 		else if (collision.gameObject.tag == "bulletEnemy")
 		{
-			_tank.Hp--;
-			if (_tank.Hp <= 0)
+			if (!_tank.IsShield)
 			{
-				Destroy(gameObject);
+				int enemyDamage = PlayerPrefs.GetInt("enemyDamage");
+				_tank.Hp -= enemyDamage;
+				if (_tank.Hp <= 0)
+				{
+					Destroy(gameObject);
+				}
+			}
+			else
+			{
+				Debug.Log("T có khiên :))");
 			}
 		}
 		else if (collision.gameObject.tag == "Enemy")
@@ -172,6 +193,7 @@ public class TankController : MonoBehaviour
 		if (_tank.Hp < DefaultHealth)
 		{
 			_tank.Hp++;
+			Debug.Log("Tank Hp: " + _tank.Hp);
 		}
 	}
 
@@ -179,17 +201,22 @@ public class TankController : MonoBehaviour
 	{
 		_timerDamage.run();
 		_tank.Damage = DefaultDamage + 1;
+		Debug.Log("Tank Damage: " + _tank.Damage);
 	}
 
 	private void IncreaseSpeedForTank()
 	{
 		_timerSpeed.run();
 		_tank.Speed = DefaulSpeed * 2;
+		Debug.Log("Tank Speed: " + _tank.Speed);
 	}
+
 
 	private void CreateShieldForTank()
 	{
 		_timerShield.run();
+		_tank.IsShield = true;
+		Debug.Log("Tank Shield: " + _tank.IsShield);
 		toggleCoroutineShield = StartCoroutine(ToggleShield());
 	}
 

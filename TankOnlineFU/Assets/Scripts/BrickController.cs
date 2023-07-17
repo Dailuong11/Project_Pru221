@@ -1,4 +1,4 @@
-using Entity;
+﻿using Entity;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -8,41 +8,49 @@ using static UnityEditor.PlayerSettings;
 public class BrickController : MonoBehaviour
 {
 
-    private int BrickHealth;
+	private int BrickHealth;
 
-    Vector3Int posMaterial;
-    public GameObject explore;
-    [SerializeField] private AudioSource exploreSoundEffect;
+	public GameObject explore;
+	private int enemyDamage;
+	private int tankDamage;
+
+	[SerializeField] private AudioSource exploreSoundEffect;
 
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        BrickHealth = 2;
-    }
+	// Start is called before the first frame update
+	void Start()
+	{
+		BrickHealth = 2;
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-       
-    }
+	// Update is called once per frame
+	void Update()
+	{
+		enemyDamage = PlayerPrefs.GetInt("enemyDamage");
+		tankDamage = PlayerPrefs.GetInt("tankDamage");
+	}
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if(collision.gameObject.tag == "bullet")
-        {
-            //exploreSoundEffect.Play();
-            BrickHealth--;
-            if (BrickHealth <= 0)
-            {
+	private void OnTriggerEnter2D(Collider2D collision)
+	{
+		if (collision.gameObject.tag == "bullet")
+		{
+			Debug.Log("Damage của tank là: " + tankDamage);
+			BrickHealth -= tankDamage;
+			if (BrickHealth <= 0)
+			{
+				Destroy(gameObject);
+			}
+		}
+		else if (collision.gameObject.tag == "bulletEnemy")
+		{
+			Debug.Log("Damage của enemy là: " + enemyDamage);
+			BrickHealth -= enemyDamage;
+			if (BrickHealth <= 0)
+			{
+				Destroy(gameObject);
+			}
+		}
 
-                //var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
-                Destroy(gameObject);
-
-                //Destroy(obj, 0.2f);
-            }
-        }
-        
-    }
+	}
 
 }

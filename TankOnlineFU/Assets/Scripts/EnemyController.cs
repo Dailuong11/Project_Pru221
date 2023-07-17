@@ -26,8 +26,8 @@ public class EnemyController : MonoBehaviour
 	private System.Random random;
 	private int randomNumber = 1;
 
-    [SerializeField] private AudioSource exploreSoundEffect;
-    private void Start()
+	[SerializeField] private AudioSource exploreSoundEffect;
+	private void Start()
 	{
 		random = new System.Random();
 		_tank = new Tank
@@ -85,7 +85,12 @@ public class EnemyController : MonoBehaviour
 				randomNumber = random.Next(1, 5);
 			}
 		}
+		PlayerPrefs.SetInt("enemyDamage", GetDamage());
 
+	}
+	public int GetDamage()
+	{
+		return _tank.Damage;
 	}
 
 	private void Move(Direction direction)
@@ -117,12 +122,13 @@ public class EnemyController : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "bullet")
 		{
-           if(exploreSoundEffect) exploreSoundEffect.Play();
-            _tank.Hp--;
+			int tankDamage = PlayerPrefs.GetInt("tankDamage");
+			if (exploreSoundEffect) exploreSoundEffect.Play();
+			_tank.Hp -= tankDamage;
 			if (_tank.Hp <= 0)
 			{
-                
-                Destroy(gameObject, 0.15f);
+
+				Destroy(gameObject, 0.15f);
 
 			}
 		}
@@ -132,7 +138,7 @@ public class EnemyController : MonoBehaviour
 			_tank.Hp--;
 			if (_tank.Hp <= 0)
 			{
-                Destroy(gameObject);
+				Destroy(gameObject);
 			}
 		}
 	}
