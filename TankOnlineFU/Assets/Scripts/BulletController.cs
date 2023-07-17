@@ -38,14 +38,12 @@ public class BulletController : MonoBehaviour
 		}
 		else if (collision.gameObject.tag == "Enemy" && Bullet.Tank.Name == "Tank")
 		{
-			Debug.Log(Bullet.Tank.Name);
 			var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 			Destroy(obj, 0.2f);
 		}
 		else if (collision.gameObject.tag == "tank" && Bullet.Tank.Name == "Enemy")
 		{
-			Debug.Log(Bullet.Tank.Name);
 			var obj = Instantiate<GameObject>(explore, transform.position, Quaternion.identity);
 			Destroy(gameObject);
 			Destroy(obj, 0.2f);

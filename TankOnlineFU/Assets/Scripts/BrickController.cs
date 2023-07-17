@@ -29,7 +29,7 @@ public class BrickController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.gameObject.tag == "bullet" || collision.gameObject.tag == "bulletEnemy")
+        if(collision.gameObject.tag == "bullet")
         {
             exploreSoundEffect.Play();
             BrickHealth--;
