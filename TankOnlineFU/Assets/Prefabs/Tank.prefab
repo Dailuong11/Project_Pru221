@@ -817,8 +817,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   health: 3
   maxHealth: 3
-  emptyHeart: {fileID: 21300000, guid: 2ffcdf1d4fac443a3a034eb9f57df6a0, type: 3}
-  fullHeart: {fileID: 21300000, guid: 4d0c2a9b1ff6d4e87be97467fe2fc0a0, type: 3}
+  emptyHeart: {fileID: 21300000, guid: 4d0c2a9b1ff6d4e87be97467fe2fc0a0, type: 3}
+  fullHeart: {fileID: 21300000, guid: 7b5c4bda1ade3ff4494727a15d0e5db3, type: 3}
   heart:
   - {fileID: 1926375570}
   - {fileID: 1879830328}
