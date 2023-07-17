@@ -25,7 +25,9 @@ public class EnemyController : MonoBehaviour
 	public bool isRunning = true;
 	private System.Random random;
 	private int randomNumber = 1;
-	private void Start()
+
+    [SerializeField] private AudioSource exploreSoundEffect;
+    private void Start()
 	{
 		random = new System.Random();
 		_tank = new Tank
@@ -115,10 +117,13 @@ public class EnemyController : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "bullet")
 		{
-			_tank.Hp--;
+           if(exploreSoundEffect) exploreSoundEffect.Play();
+            _tank.Hp--;
 			if (_tank.Hp <= 0)
 			{
-				Destroy(gameObject);
+                
+                Destroy(gameObject, 0.15f);
+
 			}
 		}
 		else if (collision.gameObject.tag == "tank")
@@ -127,7 +132,7 @@ public class EnemyController : MonoBehaviour
 			_tank.Hp--;
 			if (_tank.Hp <= 0)
 			{
-				Destroy(gameObject);
+                Destroy(gameObject);
 			}
 		}
 	}

@@ -31,7 +31,7 @@ public class BrickController : MonoBehaviour
     {
         if(collision.gameObject.tag == "bullet")
         {
-            exploreSoundEffect.Play();
+            //exploreSoundEffect.Play();
             BrickHealth--;
             if (BrickHealth <= 0)
             {
