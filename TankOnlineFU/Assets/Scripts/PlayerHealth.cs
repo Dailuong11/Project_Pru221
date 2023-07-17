@@ -18,10 +18,17 @@ public class PlayerHealth : MonoBehaviour
           if (Input.GetKeyDown("d"))
         {
 
-            takeDamage(2);
+            takeDamage(1);
         }
     }
-    public void takeDamage(int amount)
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "bulletEnemy")
+        {
+            takeDamage(1);
+        }
+    }
+        public void takeDamage(int amount)
     {
         health -= amount;
         if(health <= 0)
