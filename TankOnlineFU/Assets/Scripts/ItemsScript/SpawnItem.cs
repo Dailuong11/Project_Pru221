@@ -88,9 +88,9 @@ public class SpawnItem : MonoBehaviour
         Vector3 lowerLeftCornerWorld = Camera.main.ScreenToWorldPoint(lowerLeftCornerScreen);
         Vector3 upperRightCornerWorld = Camera.main.ScreenToWorldPoint(upperRightCornerScreen);
         screenLeft = lowerLeftCornerWorld.x;
-        screenRight = upperRightCornerWorld.x;
-        screenTop = upperRightCornerWorld.y;
-        screenBottom = lowerLeftCornerWorld.y;
+        screenRight = upperRightCornerWorld.x; 
+        screenTop = upperRightCornerWorld.y; 
+        screenBottom = lowerLeftCornerWorld.y; 
     }
 
     public Vector3Int ConvertToGridPosition(Vector3 position)

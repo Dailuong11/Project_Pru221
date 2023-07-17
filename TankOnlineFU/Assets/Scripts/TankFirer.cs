@@ -65,7 +65,7 @@ namespace DefaultNamespace
                 default:
                     throw new ArgumentOutOfRangeException();
             }
-            //fireSoundEffect.Play();
+            if(fireSoundEffect) fireSoundEffect.Play();
             rigidBody2d.AddForce(force, ForceMode2D.Impulse);
             lastFire = Time.time;
         }
