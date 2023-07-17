@@ -15,11 +15,6 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-          if (Input.GetKeyDown("d"))
-        {
-
-            takeDamage(1);
-        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
