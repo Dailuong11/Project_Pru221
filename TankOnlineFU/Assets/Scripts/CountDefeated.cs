@@ -12,6 +12,7 @@ public class CountDefeated : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        PlayerPrefs.SetInt("Point", 0);
     }
 
     // Update is called once per frame

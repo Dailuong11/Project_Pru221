@@ -1,6 +1,7 @@
 ﻿using DefaultNamespace;
 using Entity;
 using System.Collections;
+using System.Drawing;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
@@ -171,6 +172,7 @@ public class TankController : MonoBehaviour
 				if (_tank.Hp <= 0)
 				{
 					Destroy(gameObject);
+                    PlayerPrefs.SetInt("Point", 0);
                     SceneManager.LoadScene("GameOver");
                 }
             }
@@ -185,7 +187,9 @@ public class TankController : MonoBehaviour
 			if (_tank.Hp <= 0)
 			{
 				Destroy(gameObject);
-			}
+                PlayerPrefs.SetInt("Point", 0);
+                SceneManager.LoadScene("GameOver");
+            }
 		}
 	}
 
