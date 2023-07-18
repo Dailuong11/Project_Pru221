@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-   
+
 
     public void Map()
     {
@@ -26,7 +26,7 @@ public class Menu : MonoBehaviour
     }
     public void Play()
     {
-       int id = PlayerPrefs.GetInt("id");
+        int id = PlayerPrefs.GetInt("id");
         SceneManager.LoadScene("Play");
     }
     public void LoadMap()

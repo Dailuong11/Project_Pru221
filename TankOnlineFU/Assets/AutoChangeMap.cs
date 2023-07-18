@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class AutoChangeMap : MonoBehaviour
 {
@@ -33,6 +34,12 @@ public class AutoChangeMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+            SceneManager.LoadScene("GameOver");
+        if (PlayerPrefs.GetInt("Die") == 1)
+        {
+            Debug.LogError("1!");
+            SceneManager.LoadScene("GameOver");
+        }
         int id = PlayerPrefs.GetInt("id");
         int Point = PlayerPrefs.GetInt("Point");
         if (Point == id * 2)
