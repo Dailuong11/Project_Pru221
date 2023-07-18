@@ -54,7 +54,6 @@ public class SpawnEnemy : MonoBehaviour
             do
             {
                 Vector3 temp = new Vector3(Random.Range(screenLeft, screenRight), Random.Range(screenBottom, screenTop));
-                Debug.Log(temp);
                 Vector3Int randomPosItem = ConvertToGridPosition(temp);
                 bool isExist = false;
 

@@ -12,6 +12,7 @@ namespace Entity
 
         public int Damage { get; set; }
         public float Speed { get; set; }
+        public bool IsShield { get; set; }
 
         public GUID Guid { get; set; }
         public Vector3 Position { get; set; }
