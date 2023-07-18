@@ -38,6 +38,10 @@ public class AutoChangeMap : MonoBehaviour
         int Point = PlayerPrefs.GetInt("Point");
         if (Point == id * 2)
         {
+            if (id == 4)
+            {
+                SceneManager.LoadScene("Win");
+            }
             Point = 0;
             PlayerPrefs.SetInt("Point", Point);
             id++;
