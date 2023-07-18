@@ -108,7 +108,6 @@ public class TankController : MonoBehaviour
 		}
 		PlayerPrefs.SetInt("tankDamage", GetDamage());
 		PlayerPrefs.SetInt("tankHP", GetHP());
-		Debug.Log("Tank Shield: " + _tank.IsShield);
 	}
 	public int GetDamage()
 	{
@@ -180,7 +179,6 @@ public class TankController : MonoBehaviour
 		}
 		else if (collision.gameObject.tag == "Enemy")
 		{
-			Debug.Log("Va chạm với Enemy");
 			_tank.Hp--;
 			if (_tank.Hp <= 0)
 			{
@@ -196,7 +194,6 @@ public class TankController : MonoBehaviour
 		{
 			_tank.Hp++;
 			PlayerPrefs.SetInt("tankHP", GetHP());
-			Debug.Log("Tank Hp: " + _tank.Hp);
 		}
 	}
 
@@ -205,14 +202,12 @@ public class TankController : MonoBehaviour
 		_timerDamage.run();
 		_tank.Damage = DefaultDamage + 1;
 		PlayerPrefs.SetInt("tankDamage", GetDamage());
-		Debug.Log("Tank Damage: " + _tank.Damage);
 	}
 
 	private void IncreaseSpeedForTank()
 	{
 		_timerSpeed.run();
 		_tank.Speed = DefaultSpeed * 2;
-		Debug.Log("Tank Speed: " + _tank.Speed);
 	}
 
 
@@ -220,7 +215,6 @@ public class TankController : MonoBehaviour
 	{
 		_timerShield.run();
 		_tank.IsShield = true;
-		Debug.Log("Tank Shield: " + _tank.IsShield);
 		toggleCoroutineShield = StartCoroutine(ToggleShield());
 	}
 

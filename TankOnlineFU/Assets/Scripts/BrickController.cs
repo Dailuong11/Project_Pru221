@@ -34,7 +34,6 @@ public class BrickController : MonoBehaviour
 	{
 		if (collision.gameObject.tag == "bullet")
 		{
-			Debug.Log("Damage của tank là: " + tankDamage);
 			BrickHealth -= tankDamage;
 			if (BrickHealth <= 0)
 			{
@@ -43,7 +42,6 @@ public class BrickController : MonoBehaviour
 		}
 		else if (collision.gameObject.tag == "bulletEnemy")
 		{
-			Debug.Log("Damage của enemy là: " + enemyDamage);
 			BrickHealth -= enemyDamage;
 			if (BrickHealth <= 0)
 			{

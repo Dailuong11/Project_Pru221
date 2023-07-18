@@ -21,7 +21,6 @@ public class HealDisplay : MonoBehaviour
     void Update()
     {
 		health = PlayerPrefs.GetInt("tankHP");
-        Debug.Log("New Health :" + health);
 		for (int i = 0; i < heart.Length; i++)
         {
             if (heart[i] != null) // Kiểm tra null trước khi gán sprite
