@@ -515,7 +515,6 @@ GameObject:
   - component: {fileID: 658675346}
   - component: {fileID: 711902216727361652}
   - component: {fileID: 1975728977}
-  - component: {fileID: -4135744086255851579}
   - component: {fileID: 857210338}
   m_Layer: 0
   m_Name: Tank
@@ -789,20 +788,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &-4135744086255851579
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2185695495001854551}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3a14430556f8954aace50cc1c39bfba, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 3
-  maxhealth: 3
 --- !u!114 &857210338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -830,4 +815,3 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  playerHealth: {fileID: -4135744086255851579}

@@ -23,8 +23,8 @@ public class TankController : MonoBehaviour
 	private Timer _timerShield;
 	private int DefaultHealth = 3;
 	private int DefaultDamage = 1;
-	private float DefaulSpeed = 1f;
-	private bool DefaulShield = false;
+	private float DefaultSpeed = 1f;
+	private bool DefaultShield = false;
 	private float TimeItem = 5;
 	private Coroutine toggleCoroutineShield;
 	private void Start()
@@ -36,8 +36,8 @@ public class TankController : MonoBehaviour
 			Hp = DefaultHealth,
 			Point = 0,
 			Damage = DefaultDamage,
-			Speed = DefaulSpeed,
-			IsShield = DefaulShield,
+			Speed = DefaultSpeed,
+			IsShield = DefaultShield,
 			Position = new Vector3(0, -1, 0),
 			Guid = GUID.Generate()
 		};
@@ -88,7 +88,7 @@ public class TankController : MonoBehaviour
 
 		if (_timerSpeed.Finished)
 		{
-			_tank.Speed = DefaulSpeed;
+			_tank.Speed = DefaultSpeed;
 			_timerSpeed.Duration = TimeItem;
 		}
 
@@ -96,6 +96,8 @@ public class TankController : MonoBehaviour
 		{
 			if (toggleCoroutineShield != null)
 			{
+				_tank.IsShield = DefaultShield; 
+				_timerShield.Duration = TimeItem;
 				StopCoroutine(toggleCoroutineShield);
 				if (shield_1.activeSelf == true || shield_2.activeSelf == true)
 				{
@@ -193,6 +195,7 @@ public class TankController : MonoBehaviour
 		if (_tank.Hp < DefaultHealth)
 		{
 			_tank.Hp++;
+			PlayerPrefs.SetInt("tankHP", GetHP());
 			Debug.Log("Tank Hp: " + _tank.Hp);
 		}
 	}
@@ -201,13 +204,14 @@ public class TankController : MonoBehaviour
 	{
 		_timerDamage.run();
 		_tank.Damage = DefaultDamage + 1;
+		PlayerPrefs.SetInt("tankDamage", GetDamage());
 		Debug.Log("Tank Damage: " + _tank.Damage);
 	}
 
 	private void IncreaseSpeedForTank()
 	{
 		_timerSpeed.run();
-		_tank.Speed = DefaulSpeed * 2;
+		_tank.Speed = DefaultSpeed * 2;
 		Debug.Log("Tank Speed: " + _tank.Speed);
 	}
 
