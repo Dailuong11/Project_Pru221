@@ -14,7 +14,7 @@ public class SpawnItem : MonoBehaviour
     private float screenBottom;
     private Vector3 cellSize;
     private Timer timer;
-    private float timeSpawnItem = 3;
+    private float timeSpawnItem = 10;
     private List<Vector3Int> listPos;
     void Start()
     {

@@ -13,7 +13,7 @@ public class ItemHealthController : MonoBehaviour
     void Update()
     {
         float timeSinceCreation = Time.time - creationTime;
-        if (timeSinceCreation >= 20f)
+        if (timeSinceCreation >= 8f)
         {
             Destroy(gameObject);
         }
