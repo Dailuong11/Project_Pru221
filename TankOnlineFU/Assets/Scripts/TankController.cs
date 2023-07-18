@@ -171,7 +171,6 @@ public class TankController : MonoBehaviour
 				if (_tank.Hp <= 0)
 				{
 					Destroy(gameObject);
-					Debug.Log("die");
                     SceneManager.LoadScene("GameOver");
                 }
             }
