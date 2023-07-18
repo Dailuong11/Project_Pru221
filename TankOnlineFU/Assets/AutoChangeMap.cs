@@ -34,10 +34,9 @@ public class AutoChangeMap : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-            SceneManager.LoadScene("GameOver");
+        SceneManager.LoadScene("GameOver");
         if (PlayerPrefs.GetInt("Die") == 1)
         {
-            Debug.LogError("1!");
             SceneManager.LoadScene("GameOver");
         }
         int id = PlayerPrefs.GetInt("id");
