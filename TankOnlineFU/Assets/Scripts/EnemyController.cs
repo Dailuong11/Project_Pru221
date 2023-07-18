@@ -16,7 +16,7 @@ public class EnemyController : MonoBehaviour
     private Tank _tank;
     private TankMover _tankMover;
     private SpriteRenderer _renderer;
-    private int DefaultHealth = 1;
+    private int DefaultHealth = 2;
     private int DefaultDamage = 1;
     private float DefaulSpeed = 1;
 

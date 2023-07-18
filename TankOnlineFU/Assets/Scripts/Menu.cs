@@ -3,12 +3,11 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class Menu : MonoBehaviour
 {
-
-
-    public void Map()
+	public void Map()
     {
         //SceneManager.LoadScene("Menu");
     }

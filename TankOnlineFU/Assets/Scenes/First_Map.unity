@@ -1010,6 +1010,7 @@ GameObject:
   m_Component:
   - component: {fileID: 966716634}
   - component: {fileID: 966716635}
+  - component: {fileID: 966716636}
   m_Layer: 5
   m_Name: Main Menu
   m_TagString: Untagged
@@ -1053,6 +1054,23 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 857f506e4e1dce34bae8a83bf2c1300b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &966716636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 966716633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 130f4196319b76341b3d5cea6ae4698e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  map1: {fileID: 908223698}
+  map2: {fileID: 1582571141}
+  map3: {fileID: 630354089}
+  map4: {fileID: 909482991}
+  disabledColor: {r: 1, g: 0, b: 0, a: 0.77254903}
 --- !u!1 &1118388121
 GameObject:
   m_ObjectHideFlags: 0
@@ -1381,8 +1399,8 @@ MonoBehaviour:
     m_NormalColor: {r: 0.9607844, g: 0.9607844, b: 0.9607844, a: 0}
     m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.2}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.49803922}
-    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0.4392157}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_SelectedColor: {r: 1, g: 1, b: 1, a: 0.4392157}
+    m_DisabledColor: {r: 1, g: 0, b: 0, a: 0.5019608}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
