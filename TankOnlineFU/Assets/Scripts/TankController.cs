@@ -4,6 +4,7 @@ using System.Collections;
 using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TankController : MonoBehaviour
 {
@@ -170,8 +171,10 @@ public class TankController : MonoBehaviour
 				if (_tank.Hp <= 0)
 				{
 					Destroy(gameObject);
-				}
-			}
+					Debug.Log("die");
+                    SceneManager.LoadScene("GameOver");
+                }
+            }
 			else
 			{
 				Debug.Log("T có khiên :))");
