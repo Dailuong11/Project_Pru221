@@ -40,7 +40,6 @@ public class EnemyController : MonoBehaviour
 			Speed = DefaulSpeed,
 			Guid = GUID.Generate()
 		};
-		gameObject.transform.position = _tank.Position;
 		_tankMover = gameObject.GetComponent<TankMover>();
 		_renderer = gameObject.GetComponent<SpriteRenderer>();
 		Move(Direction.Down);
