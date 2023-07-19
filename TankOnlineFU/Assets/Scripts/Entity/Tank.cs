@@ -14,7 +14,6 @@ namespace Entity
         public float Speed { get; set; }
         public bool IsShield { get; set; }
 
-        public GUID Guid { get; set; }
         public Vector3 Position { get; set; }
 
         public void Move(float x, float y)

@@ -25,7 +25,6 @@ public class TankControllerConstruction : MonoBehaviour
             Hp = 10,
             Point = 0,
             Position = new Vector3(0.16f, 0.16f, 0),
-            Guid = GUID.Generate()
         };        
         gameObject.transform.position = _tank.Position;
         _tankMover = gameObject.GetComponent<TankMoverConstruction>();

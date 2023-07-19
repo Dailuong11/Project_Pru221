@@ -41,7 +41,6 @@ public class TankController : MonoBehaviour
 			Speed = DefaultSpeed,
 			IsShield = DefaultShield,
 			Position = new Vector3(0, -1, 0),
-			Guid = GUID.Generate()
 		};
 		gameObject.transform.position = _tank.Position;
 		_timerSpeed = gameObject.AddComponent<Timer>();
